@@ -67,7 +67,7 @@ conda activate phatyp
 
 ```
 python preprocessing.py [--contigs INPUT_FA] [--len MINIMUM_LEN] [--midfolder DIR]
-python PhaTYP.py [--out OUTPUT_CSV] [--reject THRESHOLD] [--midfolder DIR]
+python PhaTYP.py [--out OUTPUT_CSV] [--midfolder DIR]
 ```
 
 **Options**
@@ -79,8 +79,6 @@ python PhaTYP.py [--out OUTPUT_CSV] [--reject THRESHOLD] [--midfolder DIR]
                             predict only for sequence >= len bp (default 3000)
       --out OUTPUT_CSV
                             The output csv file (prediction)
-      --reject THRESHOLD
-                            Threshold to reject prophage. The higher the value, the more prophage will be rejected (default 0.3)
       --midfolder DIR
                             Folder to store the intermediate files (default phatyp/)
 
