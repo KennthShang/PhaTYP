@@ -1,4 +1,4 @@
-![PhaTYP](logo.jpg)
+![PhaTYP](logo.png)
 
 PhaTYP is a python library for bacteriophages' lifestyle prediction. PhaTYP is a BERT-based model and rely on protein-based vocabulary to convert DNA sequences into sentences for prediction. 
 
