@@ -17,11 +17,11 @@ from transformers import TrainingArguments, Trainer
 
 
 
-parser = argparse.ArgumentParser(description="""PhaMer is a python library for identifying bacteriophages from metagenomic data. 
-                                 PhaMer is based on a Transorfer model and rely on protein-based vocabulary to convert DNA sequences into sentences.""")
+parser = argparse.ArgumentParser(description="""PhaTYP is a python library for bacteriophages' lifestyles prediction. 
+                                 PhaTYP is a BERT-based model and rely on protein-based vocabulary to convert DNA sequences into sentences for prediction.""")
 parser.add_argument('--out', help='name of the output file',  type=str, default = 'out/example_prediction.csv')
 parser.add_argument('--reject', help='threshold to reject prophage',  type=float, default = 0.2)
-parser.add_argument('--midfolder', help='folder to store the intermediate files', type=str, default='phamer/')
+parser.add_argument('--midfolder', help='folder to store the intermediate files', type=str, default='phatyp/')
 inputs = parser.parse_args()
 
 
