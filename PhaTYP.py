@@ -34,7 +34,7 @@ if out_dir != '':
 
 
 
-sentence_id2contig = pkl.load(open(f'{transformer_fn}/sentence_id2contig.dict', 'rb'))
+id2contig = pkl.load(open(f'{transformer_fn}/sentence_id2contig.dict', 'rb'))
 bert_feat          = pd.read_csv(f'{transformer_fn}/bert_feat.csv')
 
 SENTENCE_LEN = 300  # len
@@ -95,7 +95,7 @@ with torch.no_grad():
 
 
 prediction_value = []
-for item in prediction:
+for item in pred:
     prediction_value.append(softmax(item))
 prediction_value = np.array(prediction_value)
 
