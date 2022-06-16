@@ -29,7 +29,7 @@ If you want to use the gpu to accelerate the program:
 ### Quick install
 *Note*: we suggest you to install all the package using conda (both miniconda and [Anaconda](https://anaconda.org/) are ok).
 
-After cloning this respository, you can use anaconda to install the **PhaTYP.yaml**. This will install all packages you need with gpu mode (make sure you have installed cuda on your system to use the gpu version. Othervise, it will run with cpu version). The command is: `conda env create -f PhaTYP.yaml -n phatyp`
+After cloning this respository, you can use anaconda to install the **phatyp.yaml**. This will install all packages you need with gpu mode (make sure you have installed cuda on your system to use the gpu version. Othervise, it will run with cpu version). The command is: `conda env create -f phatyp.yaml -n phatyp`
 
 
 ### Prepare the database and environment
@@ -38,7 +38,7 @@ Due to the limited size of the GitHub, we zip the database. Before using PhaTYP,
 1. When you use PhaTYP at the first time
 ```
 cd PhaTYP/
-conda env create -f PhaTYP.yaml -n phatyp
+conda env create -f phatyp.yaml -n phatyp
 conda activate phatyp
 cd database/
 bzip2 -d database.fa.bz2
