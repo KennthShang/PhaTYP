@@ -25,6 +25,7 @@ parser.add_argument('--reject', help='threshold to reject prophage',  type=float
 parser.add_argument('--midfolder', help='folder to store the intermediate files', type=str, default='phatyp/')
 inputs = parser.parse_args()
 
+transformer_fn = inputs.midfolder
 
 out_dir = os.path.dirname(inputs.out)
 if out_dir != '':
