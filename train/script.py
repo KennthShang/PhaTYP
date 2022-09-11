@@ -13,7 +13,7 @@ inputs = parser.parse_args()
 
 
 feat_df = pd.read_csv(f'{inputs.midfolder}/bert_feat.csv')
-feat_df = feat_df.drop(['label'])
+feat_df = feat_df.drop(columns = ['label'])
 
 if inputs.mode == 'finetune':
     feat_df.to_csv(inputs.out, index=False)
