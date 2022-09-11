@@ -34,10 +34,6 @@ def preprocess_function(examples):
     return tokenizer(examples["text"], truncation=True)
 
 
-def compute_metrics(eval_pred):
-    logits, labels = eval_pred
-    predictions = np.argmax(logits, axis=-1)
-    return metric.compute(predictions=predictions, references=labels)
 
 
 train = pd.read_csv(inputs.train)
@@ -74,7 +70,6 @@ trainer = Trainer(
     eval_dataset=tokenized_data["test"],
     tokenizer=tokenizer,
     data_collator=data_collator,
-    compute_metrics=compute_metrics,
 )
 
 
