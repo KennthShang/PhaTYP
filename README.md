@@ -91,8 +91,12 @@ Prediction on the example file:
 
 The prediction will be written in *example_prediction.csv*. The CSV file has three columns: contigs names, prediction, and prediction score. The test_contig.fasta contain a phage genome, so the output is phage.
     
+### Dataset and retraining the model
+Detailed information can be found in 'train/' folder
+
+  
 ### References (will be avaliable soon)
-The arXiv version can be found via: [PhaTYP: Predicting lifestyle for bacteriophages using BERT]()
+The arXiv version can be found via: [PhaTYP: Predicting lifestyle for bacteriophages using BERT](https://arxiv.org/abs/2206.09693)
 
 ### Contact
 If you have any questions, please email us: jyshang2-c@my.cityu.edu.hk
