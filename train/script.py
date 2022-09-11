@@ -18,4 +18,4 @@ feat_df = feat_df.drop(['label'])
 if inputs.mode == 'finetune':
     feat_df.to_csv(inputs.out, index=False)
 else:
-    feat_df.to_csv(inputs.out, index=False， header=False)
+    feat_df.to_csv(inputs.out, index=False, header=False)
