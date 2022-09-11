@@ -8,14 +8,14 @@ You can use the following command to convert your data into pc sentences (make s
 
 Then, you can swith into the 'train/' folder and run the `script.py` to generate the inputs of `pretrain.py` and 'finetune.py':
 
-      python script.py [--midfolder DIR] [--out FILE_NAME]
+      python script.py [--midfolder DIR] [--out FILE_NAME] [--mode pretrain or finetine]
 
 
 For example, if you want to generate a input for *pretrain.py* using the *test_contigs.fa*, you can run the following commands:
 
       python preprocessing.py --contigs test_contigs.fa --midfolder phatyp
       cd train/
-      python script.py --midfolder ../phatyp --out train.csv
+      python script.py --midfolder ../phatyp --out train.csv --mode pretrain
  
 **NOTE:** one last thing you need to do is to add labels for the the inputs of *finetune.py* according to your contigs (1 for tempearte and 0 for virulent). Because self-supervised pre-train do not need labels for training you can directly use the output files of *script.py* as inputs. The example files can be found in the 'example/' folder. 
 
