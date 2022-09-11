@@ -33,7 +33,6 @@ tokenizer = BertTokenizer.from_pretrained(CONFIG_DIR, do_basic_tokenize=False)
 def preprocess_function(examples):
     return tokenizer(examples["text"], truncation=True)
 
-metric = load_metric("accuracy")
 
 def compute_metrics(eval_pred):
     logits, labels = eval_pred
@@ -99,4 +98,4 @@ def return_metrics(pred, labels):
 
 viru, temp = return_metrics(pred, label)
 print(f'viru acc: {viru:.2f} || temp acc: {temp:.2f}')
-trainer.save_model("len1200")
+trainer.save_model("model")
