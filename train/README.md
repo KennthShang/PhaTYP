@@ -6,7 +6,7 @@ You can use the following command to convert your data into pc sentences (make s
 
       python preprocessing.py [--contigs INPUT_FA] [--len MINIMUM_LEN] [--midfolder DIR]
 
-Then, you can swith into the 'train/' folder and run the `script.py` to generate the inputs of `pretrain.py` and 'finetune.py':
+Then, you can switch into the 'train/' folder and run the `script.py` to generate the inputs of `pretrain.py` and 'finetune.py':
 
       python script.py [--midfolder DIR] [--out FILE_NAME] [--mode pretrain or finetine]
 
