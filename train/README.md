@@ -35,5 +35,7 @@ For example, if you want to generate a input for *pretrain.py* using the *test_c
 
 ## Dataset
 All the contigs dataset used in the paper can be found via [google drive](https://drive.google.com/file/d/100xUuwETTbNWpuWvUm5o-ENTOFcOFe6Z/view).
+
 The lifestyle datasets are come from [DeePhage](https://academic.oup.com/gigascience/article/10/9/giab056/6366926?login=true)
+
 The Phages datasets are come from the RefSeq database
