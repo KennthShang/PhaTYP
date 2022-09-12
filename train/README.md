@@ -30,7 +30,7 @@ For example, if you want to generate a input for *pretrain.py* using the *test_c
       python finetune.py --train train.csv --val val.csv
 
 
-**NOTE:** Because training bert require lots of computational resource, we highly recommand you to use multiple gpu units to run pretrain.py and finetune.py. (It takes nearly a week to train PhaTYP with 4 2080Ti). To run the code with multiple gpus, you can simply change `python` into `torchrun --nproc_per_node=n`. Please replace n with the number of gpus you have on your device. However, It will not take much time if you only use the prediction mode of PhaTYP (with the provided parameters) with no gpu units.
+**NOTE:** Because training bert require lots of computational resource, we highly recommand you to use multiple gpu units to run pretrain.py and finetune.py. (It takes nearly a week to train PhaTYP with 4 RTX3090). To run the code with multiple gpus, you can simply change `python` into `torchrun --nproc_per_node=n`. Please replace n with the number of gpus you have on your device. However, It will not take much time if you only use the prediction mode of PhaTYP (with the provided parameters) with no gpu units.
 
 
 ## Dataset
