@@ -17,7 +17,7 @@ For example, if you want to generate a input for *pretrain.py* using the *test_c
       cd train/
       python script.py --midfolder ../phatyp --out train.csv --mode pretrain
  
-**NOTE1:** one last thing you need to do is to add labels for the the inputs of *finetune.py* according to your contigs (1 for tempearte and 0 for virulent). Because self-supervised pre-train do not need labels for training you can directly use the output files of *script.py* as inputs. The example files can be found in the 'example/' folder. 
+**NOTE1:** one last thing you need to do is to add labels for the the inputs of *finetune.py* according to your contigs (1 for tempearte and 0 for virulent). Because self-supervised pre-train do not need labels for training you can directly use the output files of *script.py* as inputs for `pretrain.py`. The example files can be found in the 'example/' folder. 
 
 **NOTE2:** The **pretrain.py** will generate the pretrain model and store in 'log/' folder. Then the **finetune.py** will load the model from 'log/' as initial paprameters. The finetuned model will be stored in 'model/' folder.
       
