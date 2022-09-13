@@ -38,6 +38,6 @@ All the contigs dataset used in the paper can be found via [google drive](https:
 
 The phages datasets used for self-supervised learning are come from the [RefSeq database](https://www.ncbi.nlm.nih.gov/labs/virus/vssi/#/virus?SeqType_s=Nucleotide).
 
-The lifestyle datasets are come from [DeePhage](https://academic.oup.com/gigascience/article/10/9/giab056/6366926?login=true).
+The lifestyle datasets come from [DeePhage](https://academic.oup.com/gigascience/article/10/9/giab056/6366926?login=true).
 
 
