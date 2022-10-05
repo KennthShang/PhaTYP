@@ -53,7 +53,7 @@ unzip model.zip
 ```
 *Note:* **Please check whether the pytorch_model.bin is larger than 200M before using PhaTYP**
 * Because the parameter is larger than 200M, we cannot upload it to GitHub directly. Please make sure you have downloaded model.zip correctly.
-* if you cannot download the *model.zip* from the command lines above, please use the [Google Drive link](https://drive.google.com/file/d/1tsUArctGf9Fd3xa-0sEcp6ykwxTy9uxG/view?usp=sharing) to download it and place it in the *database/* folder. 
+* if you cannot download the *model.zip* from the command lines above, please use the [Google Drive link](https://drive.google.com/file/d/1tsUArctGf9Fd3xa-0sEcp6ykwxTy9uxG/view?usp=sharing) to download it and place it under the *PhaTYP/* root folder. 
 
 
 
