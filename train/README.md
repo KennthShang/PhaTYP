@@ -42,7 +42,7 @@ There are three folder representing the three sets of data used in the experimen
 
 #### Acknowledgement
 
-The phages datasets used for self-supervised learning are come from the [RefSeq database](https://www.ncbi.nlm.nih.gov/labs/virus/vssi/#/virus?SeqType_s=Nucleotide).
+The phages datasets used for self-supervised learning come from the [RefSeq database](https://www.ncbi.nlm.nih.gov/labs/virus/vssi/#/virus?SeqType_s=Nucleotide).
 
 The lifestyle datasets come from [DeePhage](https://academic.oup.com/gigascience/article/10/9/giab056/6366926?login=true).
 
