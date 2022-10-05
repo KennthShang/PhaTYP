@@ -40,7 +40,7 @@ All the contigs dataset used in the paper can be downloaded via [google drive](h
 
 There are three folder representing the three sets of data used in the experiments, including self-supervised training (142434), fine-tuning task (160000), and short contigs datasets (320000) .
 
-#### acknowledgement
+#### Acknowledgement
 
 The phages datasets used for self-supervised learning are come from the [RefSeq database](https://www.ncbi.nlm.nih.gov/labs/virus/vssi/#/virus?SeqType_s=Nucleotide).
 
