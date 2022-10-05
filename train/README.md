@@ -34,7 +34,9 @@ For example, if you want to generate a input for *pretrain.py* using the *test_c
 
 
 ## Dataset
-All the contigs dataset used in the paper can be found via [google drive](https://drive.google.com/file/d/100xUuwETTbNWpuWvUm5o-ENTOFcOFe6Z/view).
+Due to the limitation of file size at Github, we saved the datasets at Google Drive.
+
+All the contigs dataset used in the paper can be downloaded via [google drive](https://drive.google.com/file/d/100xUuwETTbNWpuWvUm5o-ENTOFcOFe6Z/view).
 
 There are three folder representing the three sets of data used in the experiments, including self-supervised training (142434), fine-tuning task (160000), and short contigs datasets (320000) .
 
