@@ -6,6 +6,8 @@ import numpy as np
 import pickle as pkl
 import subprocess
 import argparse
+import shutil
+from shutil import which
 from collections import Counter
 from Bio import SeqIO
 from Bio.SeqRecord import SeqRecord
