@@ -100,9 +100,25 @@ The prediction will be written in *example_prediction.csv*. The CSV file has thr
 ### Dataset and retraining the model
 Detailed information can be found in 'train/' folder
 
-  
-### References (will be avaliable soon)
+### Updates
+We added a parameter called 'prodigal' for you to use different versions of the prodigal. You can use the path of your prodigal. Or if you have added your prodigal into your env path, you can use the path's name.
+
+```
+python preprocessing.py --contigs test_contigs.fa --prodigal prodigal-gv
+
+OR
+
+python preprocessing.py --contigs test_contigs.fa --prodigal /path/to/prodigal/prodigal-gv
+```
+
+### References 
+
+PhaTYP was accpeted by Briefings in Bioinformatcs: [PhaTYP: Predicting lifestyle for bacteriophages using BERT](https://doi.org/10.1093/bib/bbac487)
+
+Jiayu Shang, Xubo Tang, Yanni Sun, PhaTYP: predicting the lifestyle for bacteriophages using BERT, Briefings in Bioinformatics, 2022;, bbac487, https://doi.org/10.1093/bib/bbac487
+
 The arXiv version can be found via: [PhaTYP: Predicting lifestyle for bacteriophages using BERT](https://arxiv.org/abs/2206.09693)
+
 
 ### Contact
 If you have any questions, please email us: jyshang2-c@my.cityu.edu.hk
