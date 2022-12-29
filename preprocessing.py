@@ -20,7 +20,7 @@ parser = argparse.ArgumentParser(description="""PhaTYP is a python library for b
 parser.add_argument('--contigs', help='FASTA file of contigs',  default = 'test_contigs.fa')
 parser.add_argument('--len', help='minimun length of contigs', type=int, default=3000)
 parser.add_argument('--midfolder', help='folder to store the intermediate files', type=str, default='phatyp/')
-parser.add_argument('--prodigal', help='folder to store the intermediate files', type=str, default='prodigal')
+parser.add_argument('--prodigal', help='version of prodigal', type=str, default='prodigal')
 inputs = parser.parse_args()
 
 
