@@ -49,7 +49,7 @@ SeqIO.write(rec, f'{out_fn}/filtered_contigs.fa', 'fasta')
 
 prodigal = inputs.prodigal
 # check if pprodigal is available
-if which("pprodigal") is not None and prodigal == 'prodigal:
+if which("pprodigal") is not None and prodigal == 'prodigal':
     print("Using parallelized prodigal...")
     prodigal = f'pprodigal -T {threads}'
 
