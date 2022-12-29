@@ -23,6 +23,7 @@ parser.add_argument('--contigs', help='FASTA file of contigs',  default = 'test_
 parser.add_argument('--len', help='minimun length of contigs', type=int, default=3000)
 parser.add_argument('--midfolder', help='folder to store the intermediate files', type=str, default='phatyp/')
 parser.add_argument('--prodigal', help='version of prodigal', type=str, default='prodigal')
+parser.add_argument('--threads', help='version of prodigal', type=str, default='2')
 inputs = parser.parse_args()
 
 
@@ -53,7 +54,7 @@ prodigal = inputs.prodigal
 # check if pprodigal is available
 if which("pprodigal") is not None and prodigal == 'prodigal':
     print("Using parallelized prodigal...")
-    prodigal = f'pprodigal -T {threads}'
+    prodigal = f'pprodigal -T {inputs.threads}'
 
 prodigal_cmd = f'{prodigal} -i {out_fn}/filtered_contigs.fa -a {out_fn}/test_protein.fa -f gff -p meta'
 print("Running prodigal...")
