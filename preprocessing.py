@@ -57,7 +57,7 @@ if which("pprodigal") is not None and prodigal == 'prodigal':
     prodigal = f'pprodigal -T {inputs.threads}'
 
 prodigal_cmd = f'{prodigal} -i {out_fn}/filtered_contigs.fa -a {out_fn}/test_protein.fa -f gff -p meta'
-print("Running prodigal...")
+print(f"Running {prodigal}...")
 _ = subprocess.check_call(prodigal_cmd, shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 
 
