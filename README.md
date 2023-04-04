@@ -34,9 +34,6 @@ Due to the limited size of the GitHub, we zip the database. Before using PhaTYP,
 cd PhaTYP/
 conda env create -f phatyp.yaml -n phatyp
 conda activate phatyp
-cd database/
-bzip2 -d database.fa.bz2
-cd ..
 
 fileid="1tsUArctGf9Fd3xa-0sEcp6ykwxTy9uxG"
 filename="model.zip"

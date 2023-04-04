@@ -17,7 +17,7 @@ from Bio.SeqRecord import SeqRecord
 ########################  Parameters  #######################
 #############################################################
 
-parser = argparse.ArgumentParser(description="""PhaTYP is a python library for bacteriophages' lifestyles prediction. 
+parser = argparse.ArgumentParser(description="""PhaTYP is a python library for bacteriophages' lifestyles prediction.
                                  PhaTYP is a BERT-based model and rely on protein-based vocabulary to convert DNA sequences into sentences for prediction.""")
 parser.add_argument('--contigs', help='FASTA file of contigs',  default = 'test_contigs.fa')
 parser.add_argument('--len', help='minimun length of contigs', type=int, default=3000)
@@ -71,7 +71,7 @@ print("Creating Diamond database and running Diamond...")
 
 try:
     # create database
-    make_diamond_cmd = f'diamond makedb --threads 8 --in database/database.fa -d {out_fn}/database.dmnd'
+    make_diamond_cmd = f'diamond makedb --threads 8 --in database/database.fa.gz -d {out_fn}/database.dmnd'
     print("Creating Diamond database...")
     _ = subprocess.check_call(make_diamond_cmd, shell=True)
     # running alignment
