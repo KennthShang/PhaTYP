@@ -90,11 +90,11 @@ Detailed information can be found in 'train/' folder
 We added a parameter called 'prodigal' for you to use different versions of the prodigal. You can use the path of your prodigal. Or if you have added your prodigal into your env path, you can use the path's name.
 
 ```
-python preprocessing.py --contigs test_contigs.fa --prodigal prodigal-gv
+preprocessing.py --contigs test_contigs.fa --prodigal prodigal-gv
 
 OR
 
-python preprocessing.py --contigs test_contigs.fa --prodigal /path/to/prodigal/prodigal-gv
+preprocessing.py --contigs test_contigs.fa --prodigal /path/to/prodigal/prodigal-gv
 ```
 
 ### References
