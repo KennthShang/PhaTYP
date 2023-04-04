@@ -1,6 +1,6 @@
 ![PhaTYP](logo.png)
 
-PhaTYP is a python library for bacteriophages' lifestyle prediction. PhaTYP is a BERT-based model and rely on protein-based vocabulary to convert DNA sequences into sentences for prediction. 
+PhaTYP is a python library for bacteriophages' lifestyle prediction. PhaTYP is a BERT-based model and rely on protein-based vocabulary to convert DNA sequences into sentences for prediction.
 
 
 
@@ -9,21 +9,14 @@ Our web server for phage-related tasks (including phage identification, taxonomy
 
 
 # Overview
-The main function of PhaTYP is to predict the lifestyles (virulent or temperate) of phage-like contigs. The input of the program should be fasta files and the output will be a csv file showing the predictions. Since it is a Deep learning model, if you have GPU units on your PC, we recommand you to use them to save your time. 
+The main function of PhaTYP is to predict the lifestyles (virulent or temperate) of phage-like contigs. The input of the program should be fasta files and the output will be a csv file showing the predictions. Since it is a Deep learning model, if you have GPU units on your PC, we recommand you to use them to save your time.
 
 If you have any trouble installing or using PhaTYP, please let us know by emailing us (jyshang2-c@my.cityu.edu.hk).
 
+### Quick install
+*Note*: we suggest you to install all the package using conda (both miniconda and [Anaconda](https://anaconda.org/) are ok).
 
-## Required Dependencies
-* Python 3.x
-* Numpy
-* Pandas
-* Pytorch>1.8.0
-* transformer
-* datasets
-* [Diamond](https://github.com/bbuchfink/diamond)
-* [Prodigal](https://github.com/hyattpd/Prodigal)
-
+After cloning this respository, you can use anaconda to install the **phatyp.yaml**. This will install all packages you need with gpu mode (make sure you have installed cuda on your system to use the gpu version. Othervise, it will run with cpu version). The command is: `conda env create -f phatyp.yaml -n phatyp`
 
 If you want to use the gpu to accelerate the program:
 * cuda
@@ -31,11 +24,6 @@ If you want to use the gpu to accelerate the program:
 
 * For cpu version pytorch: `conda install pytorch torchvision torchaudio cpuonly -c pytorch`
 * For gpu version pytorch: Search [pytorch](https://pytorch.org/) to find the correct cuda version according to your computer
-
-### Quick install
-*Note*: we suggest you to install all the package using conda (both miniconda and [Anaconda](https://anaconda.org/) are ok).
-
-After cloning this respository, you can use anaconda to install the **phatyp.yaml**. This will install all packages you need with gpu mode (make sure you have installed cuda on your system to use the gpu version. Othervise, it will run with cpu version). The command is: `conda env create -f phatyp.yaml -n phatyp`
 
 
 ### Prepare the database and environment
@@ -46,9 +34,6 @@ Due to the limited size of the GitHub, we zip the database. Before using PhaTYP,
 cd PhaTYP/
 conda env create -f phatyp.yaml -n phatyp
 conda activate phatyp
-cd database/
-bzip2 -d database.fa.bz2
-cd ..
 
 fileid="1tsUArctGf9Fd3xa-0sEcp6ykwxTy9uxG"
 filename="model.zip"
@@ -56,10 +41,11 @@ html=`curl -c ./cookie -s -L "https://drive.google.com/uc?export=download&id=${f
 curl -Lb ./cookie "https://drive.google.com/uc?export=download&`echo ${html}|grep -Po '(confirm=[a-zA-Z0-9\-_]+)'`&id=${fileid}" -o ${filename}
 
 unzip model.zip
+pip install .
 ```
 *Note:* **Please check whether the pytorch_model.bin is larger than 200M before using PhaTYP**
 * Because the parameter is larger than 200M, we cannot upload it to GitHub directly. Please make sure you have downloaded model.zip correctly.
-* if you cannot download the *model.zip* from the command lines above, please use the [Google Drive link](https://drive.google.com/file/d/1tsUArctGf9Fd3xa-0sEcp6ykwxTy9uxG/view?usp=sharing) to download it and place it under the *PhaTYP/* root folder. 
+* if you cannot download the *model.zip* from the command lines above, please use the [Google Drive link](https://drive.google.com/file/d/1tsUArctGf9Fd3xa-0sEcp6ykwxTy9uxG/view?usp=sharing) to download it and place it under the *PhaTYP/* root folder.
 
 
 
@@ -72,8 +58,8 @@ conda activate phatyp
 ## Usage
 
 ```
-python preprocessing.py [--contigs INPUT_FA] [--len MINIMUM_LEN] [--midfolder DIR]
-python PhaTYP.py [--out OUTPUT_CSV] [--midfolder DIR]
+preprocessing.py [--contigs INPUT_FA] [--len MINIMUM_LEN] [--midfolder DIR]
+PhaTYP.py [--out OUTPUT_CSV] [--midfolder DIR]
 ```
 
 **Options**
@@ -92,11 +78,11 @@ python PhaTYP.py [--out OUTPUT_CSV] [--midfolder DIR]
 
 Prediction on the example file:
 
-    python preprocessing.py --contigs test_contigs.fa
-    python PhaTYP.py --out example_prediction.csv
+    preprocessing.py --contigs test_contigs.fa
+    PhaTYP.py --out example_prediction.csv
 
 The prediction will be written in *example_prediction.csv*. The CSV file has three columns: contigs names, prediction, and prediction score. The test_contig.fasta contain a phage genome, so the output is phage.
-    
+
 ### Dataset and retraining the model
 Detailed information can be found in 'train/' folder
 
@@ -104,14 +90,14 @@ Detailed information can be found in 'train/' folder
 We added a parameter called 'prodigal' for you to use different versions of the prodigal. You can use the path of your prodigal. Or if you have added your prodigal into your env path, you can use the path's name.
 
 ```
-python preprocessing.py --contigs test_contigs.fa --prodigal prodigal-gv
+preprocessing.py --contigs test_contigs.fa --prodigal prodigal-gv
 
 OR
 
-python preprocessing.py --contigs test_contigs.fa --prodigal /path/to/prodigal/prodigal-gv
+preprocessing.py --contigs test_contigs.fa --prodigal /path/to/prodigal/prodigal-gv
 ```
 
-### References 
+### References
 
 PhaTYP was accpeted by Briefings in Bioinformatcs: [PhaTYP: Predicting lifestyle for bacteriophages using BERT](https://doi.org/10.1093/bib/bbac487)
 

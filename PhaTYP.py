@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import os
 import torch
 import datasets
@@ -18,7 +20,7 @@ from transformers import TrainingArguments, Trainer
 
 
 
-parser = argparse.ArgumentParser(description="""PhaTYP is a python library for bacteriophages' lifestyles prediction. 
+parser = argparse.ArgumentParser(description="""PhaTYP is a python library for bacteriophages' lifestyles prediction.
                                  PhaTYP is a BERT-based model and rely on protein-based vocabulary to convert DNA sequences into sentences for prediction.""")
 parser.add_argument('--out', help='name of the output file',  type=str, default = 'out/example_prediction.csv')
 parser.add_argument('--reject', help='threshold to reject prophage',  type=float, default = 0.2)
