@@ -58,8 +58,8 @@ conda activate phatyp
 ## Usage
 
 ```
-preprocessing.py [--contigs INPUT_FA] [--len MINIMUM_LEN] [--midfolder DIR]
-PhaTYP.py [--out OUTPUT_CSV] [--midfolder DIR]
+python preprocessing.py [--contigs INPUT_FA] [--len MINIMUM_LEN] [--midfolder DIR]
+python PhaTYP.py [--out OUTPUT_CSV] [--midfolder DIR]
 ```
 
 **Options**
@@ -78,8 +78,8 @@ PhaTYP.py [--out OUTPUT_CSV] [--midfolder DIR]
 
 Prediction on the example file:
 
-    preprocessing.py --contigs test_contigs.fa
-    PhaTYP.py --out example_prediction.csv
+    python preprocessing.py --contigs test_contigs.fa
+    python PhaTYP.py --out example_prediction.csv
 
 The prediction will be written in *example_prediction.csv*. The CSV file has three columns: contigs names, prediction, and prediction score. The test_contig.fasta contain a phage genome, so the output is phage.
 
@@ -90,11 +90,11 @@ Detailed information can be found in 'train/' folder
 We added a parameter called 'prodigal' for you to use different versions of the prodigal. You can use the path of your prodigal. Or if you have added your prodigal into your env path, you can use the path's name.
 
 ```
-preprocessing.py --contigs test_contigs.fa --prodigal prodigal-gv
+python preprocessing.py --contigs test_contigs.fa --prodigal prodigal-gv
 
 OR
 
-preprocessing.py --contigs test_contigs.fa --prodigal /path/to/prodigal/prodigal-gv
+python preprocessing.py --contigs test_contigs.fa --prodigal /path/to/prodigal/prodigal-gv
 ```
 
 ### References
