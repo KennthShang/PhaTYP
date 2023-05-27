@@ -5,7 +5,10 @@ PhaTYP is a python library for bacteriophages' lifestyle prediction. PhaTYP is a
 
 
 ## News !!!
-Our web server for phage-related tasks (including phage identification, taxonomy classification, lifestyle prediction, and host prediction) is available! You can visit [PhaBOX](https://phage.ee.cityu.edu.hk/) to use the GUI. We also provided more detailed intermediate files and visualization for further analyzation. A stand-alone version of PhaBOX is also available via [GitHub version](https://github.com/KennthShang/PhaBOX), and you can run all these tools at once. Hope you will enjoy it!
+
+1. This folder will be no longer maintained. The program has been updated and move to PhaBOX [https://github.com/KennthShang/PhaBOX], which is more user-friendly. Hope you will enjoy it.
+
+2. Our web server for phage-related tasks (including phage identification, taxonomy classification, lifestyle prediction, and host prediction) is available! You can visit [https://phage.ee.cityu.edu.hk/] to use the GUI. We also provided more detailed intermediate files and visualization for further analyzation. 
 
 
 # Overview
