@@ -1,8 +1,7 @@
 # ATTNETION!!!
-1. The program has been updated and moved to (PhaBOX)[https://github.com/KennthShang/PhaBOX], which is more user-friendly. Hope you will enjoy it. This folder will be no longer maintained. 
+- The program has been updated and moved to [PhaBOX](https://github.com/KennthShang/PhaBOX), which is more user-friendly. Hope you will enjoy it. This folder will be no longer maintained. 
 
-
-2. Our web server for  viruses-related tasks (including virus identification, taxonomy classification, lifestyle prediction, and host prediction) is available! You can visit [PhaBOX 2](https://phage.ee.cityu.edu.hk/) to use the GUI. We also provided more detailed intermediate files and visualization for further analysis. 
+- Our web server for viruses-related tasks (including virus identification, taxonomy classification, lifestyle prediction, host prediction, and protein annotation) is available! You can visit [PhaBOX 2](http://phage.ee.cityu.edu.hk/) to use the GUI. We also provided more detailed intermediate files and visualization for further analysis.
 
 ![PhaTYP](logo.png)
 
